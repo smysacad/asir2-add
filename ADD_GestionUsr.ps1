@@ -52,7 +52,7 @@ function Nuevo-GrupoSeguridad {
     $ubicacionDN = Read-Host "Ruta DN de la OU (ej: OU=Ventas,DC=miEmpresa,DC=local)"
 
     try {
-        New-ADGroup -Name $nombreGrupo -Path$ubicacionDN -GroupScope Global -GroupCategory Security
+        New-ADGroup -Name $nombreGrupo -Path $ubicacionDN -GroupScope Global -GroupCategory Security
         Write-Host "`n++ Grupo '$nombreGrupo' registrado con exito ++" -ForegroundColor Green
     }
     catch {
